@@ -5,10 +5,20 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "npm run functions:build && ng build",
+    "build:staging": "npm run functions:build && ng build --e=staging",
+    "build:prod": "npm run functions:build && ng build --prod && npm run ngsw-config",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "functions:build": "cd functions && npm run build && cd ../",
+    "deploy": "npm run build && firebase deploy --project development",
+    "deploy:staging": "npm run build:staging && firebase deploy --project staging",
+    "deploy:prod": "npm run build:prod && firebase deploy --project production",
+    "disable": "firebase hosting:disable --project development",
+    "disable:staging": "firebase hosting:disable --project staging",
+    "disable:prod": "firebase hosting:disable --project production",
+    "ngsw-config": "node_modules/.bin/ngsw-config dist src/ngsw-config.json"
   },
   "private": true,
   "dependencies": {
@@ -21,12 +31,15 @@
     "@angular/platform-browser": "^5.0.0",
     "@angular/platform-browser-dynamic": "^5.0.0",
     "@angular/router": "^5.0.0",
+    "@angular/service-worker": "^5.0.0",
+    "angularfire2": "^5.0.0-rc.4",
     "core-js": "^2.4.1",
+    "firebase": "^4.6.2",
     "rxjs": "^5.5.2",
     "zone.js": "^0.8.14"
   },
   "devDependencies": {
-    "@angular/cli": "1.5.5",
+    "@angular/cli": "1.6.0-rc.1",
     "@angular/compiler-cli": "^5.0.0",
     "@angular/language-service": "^5.0.0",
     "@types/jasmine": "~2.5.53",

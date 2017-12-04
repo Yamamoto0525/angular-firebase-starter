@@ -1,0 +1,14 @@
+<form (ngSubmit)="submitPassword(AuthPass.value)" action="post" class="dev-auth-form">
+  <h1 class="form-title">Login</h1>
+  <ng-container *ngIf="!AuthPass.flag">
+    <div class="form-password">
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" [(ngModel)]="AuthPass.value" required/>
+    </div>
+    <div class="form-btn">
+      <input type="submit">
+    </div>
+  </ng-container>
+  <p class="red-text">{{ ErrorTxt }}</p>
+
+</form>

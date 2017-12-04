@@ -1,0 +1,41 @@
+.dev-auth-form {
+  position: relative;
+  margin: 30px auto;
+  padding: 20px 40px;
+  width: 200px;
+  height: 220px;
+  font-family: Arial;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-box-shadow: 0px 1px 10px #488a9e;
+  -moz-box-shadow: 0px 1px 10px #488a9e;
+  box-shadow: 0px 1px 10px #488a9e;
+  border: solid #4eb4c2 1px;
+  background: #fafafa;
+  z-index: 9999;
+}
+
+.dev-auth-form .form-title {
+  margin-bottom: 40px;
+  color: #4eb4c2;
+  font-size: 30px;
+  text-align: center;
+}
+
+.dev-auth-form .form-password {
+  display: block;
+}
+
+.dev-auth-form .form-password input {
+  width: 100%;
+}
+
+.dev-auth-form .red-text {
+  color: red;
+  margin-top: 10px;
+}
+
+.dev-auth-form .form-btn {
+  margin-top: 15px;
+}

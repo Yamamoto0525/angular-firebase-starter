@@ -1,6 +1,7 @@
 # AngularFirebaseStarter
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.5.
+But local version is 1.6.0-rc.1, because @angular/service-worker does not work with previous version.
 
 ## Development server
 
@@ -21,6 +22,10 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 ## Running end-to-end tests
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+
+## Deploy Command 
+
+Run `npm run deploy` to upload data to this firebase project. Use the `:prod` flag for a production deploy, or `:staging` flag for a staging.
 
 ## Further help
 

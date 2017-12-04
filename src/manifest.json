@@ -1,0 +1,8 @@
+{
+  "manifest_version": 1,
+  "name": "AngularFirebaseStarter",
+  "short_name": "AFS",
+  "version": "1.0.0.0",
+  "display": "standalone",
+  "icons": []
+}

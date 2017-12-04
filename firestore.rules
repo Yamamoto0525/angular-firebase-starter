@@ -1,0 +1,7 @@
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /dev-auth/login {
+      allow read;
+    }
+  }
+}

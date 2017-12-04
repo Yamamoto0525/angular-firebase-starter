@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "development": "your-dev-firebase-project",
+    "staging": "your-staging-firebase-project",
+    "production": "your-prod-firebase-project"
+  }
+}
